@@ -21,14 +21,14 @@ npm run preview
 ## מבנה
 
 - `index.html`, תיקיות `services/`, `projects/`, `about/`, `process/`, `contact/`, `accessibility/`, `privacy/` (כל אחת עם `index.html` — כתובות נקיות), `404.html` — מעטפת רזה, כל הטקסט מרונדר מ־`src/texts/`
-- `src/style.css` — только `@import` из `src/styles/` (`tokens`, `base`, `header`, `sections`, `cards`, `hero`, `forms`, `floats`, `a11y`, `footer`, `cta`)
+- `src/style.css` — מכיל רק שורות `@import` מתוך `src/styles/` (`tokens`, `base`, `header`, `sections`, `cards`, `hero`, `forms`, `floats`, `a11y`, `footer`, `cta`)
 - `src/site.ts` — מייל, WhatsApp, ניווט
 - `src/content.ts` — שירותים, פרויקטים, תהליך (re-exported from `src/texts/`)
 - `src/texts/` — כל הטקסטים בעברית כאובייקטים: `common.ts`, `home.ts`, `servicesPage.ts`, `projectsPage.ts`, `aboutPage.ts`, `processPage.ts`, `contactPage.ts`, `legal.ts`, `notFound.ts`, `index.ts`
-- `src/ui/` — `components.ts` (בנאי `badge`/`iconBadge`/`checkList`/`stackList`/`sectionHead`/`card`), `header.ts`, `footer.ts`, `floats.ts`, `a11y.ts`
+- `src/ui/` — `components.ts` (בנאי `badge`/`iconBadge`/`checkList`/`stackList`/`sectionHead`/`card`/`linkCard`), `header.ts`, `footer.ts`, `floats.ts`, `a11y.ts`
 - `src/shared.ts` — מעטפת `initPage` בלבד
 - `src/pages/` — לוגיקה לכל עמוד (מרכיבה `ui/components` + `texts`, בלי עברית inline)
-- `public/robots.txt`
+- `public/` — `robots.txt`, `sitemap.xml`
 
 ## פרטי קשר (מעודכנים)
 
@@ -54,5 +54,5 @@ Tabler Icons דרך CDN רשמי (`@tabler/icons-webfont`), בשימוש: whatsa
 
 ## פתוח
 
-- דומיין ייצור, לוגו סופי, פרויקטים אמיתיים (כרגע 3 דמו מסומנים)
+- דומיין ייצור, לוגו סופי, פרויקטים אמיתיים נוספים (כרגע פרויקט חי אחד — אתר תדמית למשרד עו״ד לדיני מס: https://sle-law-site.menilevi0533011599.workers.dev/ ; פרויקטי הדמו נמחקו)
 - העתקת תוכן מסמכי ה־Word ב־`_incoming` לעמודי הנגישות/פרטיות
