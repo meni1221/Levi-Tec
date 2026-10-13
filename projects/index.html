@@ -17,16 +17,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main"></a>
-  <div data-mount="header"></div>
-  <main id="main">
-    <section class="section"><div class="container">
-      <div id="projectsHead"></div>
-      <div class="grid" id="projectsList" style="grid-template-columns:1fr"></div>
-      <div id="projectsNote" style="margin-top:1.25rem"></div>
-      <div style="margin-top:2rem;display:flex;gap:.75rem;flex-wrap:wrap" id="projectsCtas"></div>
-    </div></section>
-  </main>
-  <div data-mount="footer"></div>
-  <script type="module" src="/src/pages/projects.ts"></script>
+  <div id="root" data-page="projects"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

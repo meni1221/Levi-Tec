@@ -17,19 +17,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main"></a>
-  <div data-mount="header"></div>
-  <main id="main">
-    <section class="section"><div class="container">
-      <div id="servicesHead"></div>
-      <div class="grid" id="servicesList" style="grid-template-columns:1fr"></div>
-    </div></section>
-    <section class="section" style="padding-top:0"><div class="container">
-      <div id="servicesTransparencyHead"></div>
-      <div class="grid grid-3" id="servicesTransparency"></div>
-      <div style="margin-top:2rem" id="servicesCta"></div>
-    </div></section>
-  </main>
-  <div data-mount="footer"></div>
-  <script type="module" src="/src/pages/services.ts"></script>
+  <div id="root" data-page="services"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

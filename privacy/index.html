@@ -17,28 +17,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main"></a>
-  <div data-mount="header"></div>
-  <main id="main">
-    <section class="section"><div class="container">
-      <div id="privacyHead"></div>
-      <div id="privacyBody"></div>
-    </div></section>
-  </main>
-  <div data-mount="footer"></div>
-  <script type="module">
-    import { initPage } from "/src/shared.ts";
-    import { siteConfig } from "/src/site.ts";
-    import { privacyPage } from "/src/texts/legal.ts";
-    import { card, checkList, sectionHead } from "/src/ui/components.ts";
-    const t = privacyPage;
-    document.querySelector("#privacyHead").innerHTML = sectionHead(t.head.eyebrow, t.head.title, t.head.lead);
-    document.querySelector("#privacyBody").innerHTML =
-      `<div style="margin-top:2.5rem">` + card(`<h3><i class="ti ${t.collected.icon}" aria-hidden="true"></i> ${t.collected.title}</h3>` + checkList(t.collected.items)) + `</div>
-      <div style="margin-top:1.25rem">` + card(`<h3><i class="ti ${t.contact.icon}" aria-hidden="true"></i> ${t.contact.title}</h3>
-        <p>${t.contact.emailLabel} <a href="mailto:${siteConfig.email}" class="ltr" style="color:var(--brand)">${siteConfig.email}</a></p>
-        <p>${t.contact.phoneLabel} <a href="tel:+${siteConfig.whatsappNumber}" class="ltr" style="color:var(--brand)">${t.contact.phoneDisplay}</a></p>`) + `</div>
-      <p style="color:var(--muted);font-size:.85rem;margin-top:1.5rem">${t.note}</p>`;
-    initPage("");
-  </script>
+  <div id="root" data-page="privacy"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

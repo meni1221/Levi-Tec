@@ -17,33 +17,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main"></a>
-  <div data-mount="header"></div>
-  <main id="main">
-    <section class="section"><div class="container">
-      <div id="aboutHead"></div>
-      <div class="grid" style="grid-template-columns:1fr;margin-top:2.5rem" id="aboutGrid"></div>
-      <div style="margin-top:2rem;display:flex;gap:.75rem;flex-wrap:wrap" id="aboutCtas"></div>
-    </div></section>
-  </main>
-  <div data-mount="footer"></div>
-  <script type="module">
-    import { initPage } from "/src/shared.ts";
-    import { aboutPage } from "/src/texts/aboutPage.ts";
-    import { card, checkList, sectionHead } from "/src/ui/components.ts";
-    const t = aboutPage;
-    document.querySelector("#aboutHead").innerHTML = sectionHead(t.head.eyebrow, t.head.title, t.head.lead);
-    document.querySelector("#aboutGrid").innerHTML =
-      card(`<span class="logo-mark" style="width:5rem;height:5rem;font-size:2rem" aria-hidden="true">${t.mark}</span>
-        <h3 style="font-size:1.4rem">${t.name}</h3>
-        <p style="color:var(--muted)">${t.role}</p>
-        <p class="ltr" style="font-size:.85rem;color:var(--muted)">${t.stack}</p>
-        <p>${t.profile}</p>`) +
-      card(`<h3><i class="ti ${t.approach.icon}" aria-hidden="true"></i> ${t.approach.title}</h3>` + checkList(t.approach.items)) +
-      card(`<h3><i class="ti ${t.value.icon}" aria-hidden="true"></i> ${t.value.title}</h3><p>${t.value.text}</p>`) +
-      card(`<h3><i class="ti ${t.honesty.icon}" aria-hidden="true"></i> ${t.honesty.title}</h3><p style="font-size:.92rem">${t.honesty.text}</p>`);
-    document.querySelector("#aboutCtas").innerHTML =
-      `<a class="btn btn-primary" href="/contact/">${t.primaryCta}</a><a class="btn btn-secondary" href="/process/">${t.secondaryCta}</a>`;
-    initPage("about");
-  </script>
+  <div id="root" data-page="about"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

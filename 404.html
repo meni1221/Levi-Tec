@@ -11,21 +11,8 @@
   <meta property="og:image" content="/og.svg" />
 </head>
 <body>
-  <div data-mount="header"></div>
-  <main class="container" style="padding:6rem 1.25rem;text-align:center" id="notFound"></main>
-  <div data-mount="footer"></div>
-  <script type="module">
-    import { initPage } from "/src/shared.ts";
-    import { notFound } from "/src/texts/notFound.ts";
-    document.querySelector("#notFound").innerHTML =
-      `<p class="ltr" style="color:var(--brand);font-weight:800">${notFound.code}</p>
-      <h1>${notFound.title}</h1>
-      <p style="color:var(--text-dim)">${notFound.sub}</p>
-      <div style="display:flex;gap:.75rem;justify-content:center;margin-top:2rem;flex-wrap:wrap">
-        <a class="btn btn-primary" href="/">${notFound.homeCta}</a>
-        <a class="btn btn-secondary" href="/contact/">${notFound.contactCta}</a>
-      </div>`;
-    initPage("");
-  </script>
+  <a class="skip-link" href="#main"></a>
+  <div id="root" data-page="notfound"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
