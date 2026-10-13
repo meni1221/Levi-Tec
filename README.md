@@ -1,6 +1,6 @@
-# Levi-Tec — אתר עסקי (Vite + Vanilla TS)
+# Levi-Tec — אתר עסקי (Vite + React + TypeScript)
 
-אתר סטטי בעברית (RTL), בלי Next.js — קבצי HTML פשוטים + TypeScript קל.
+אתר סטטי בעברית (RTL), בלי Next.js — קבצי HTML פשוטים + React קל.
 
 ## הרצה מקומית
 
@@ -25,9 +25,9 @@ npm run preview
 - `src/site.ts` — מייל, WhatsApp, ניווט
 - `src/content.ts` — שירותים, פרויקטים, תהליך (re-exported from `src/texts/`)
 - `src/texts/` — כל הטקסטים בעברית כאובייקטים: `common.ts`, `home.ts`, `servicesPage.ts`, `projectsPage.ts`, `aboutPage.ts`, `processPage.ts`, `contactPage.ts`, `legal.ts`, `notFound.ts`, `index.ts`
-- `src/ui/` — `components.ts` (בנאי `badge`/`iconBadge`/`checkList`/`stackList`/`sectionHead`/`card`/`linkCard`), `header.ts`, `footer.ts`, `floats.ts`, `a11y.ts`
-- `src/shared.ts` — מעטפת `initPage` בלבד
-- `src/pages/` — לוגיקה לכל עמוד (מרכיבה `ui/components` + `texts`, בלי עברית inline)
+- `src/main.tsx` — נקודת כניסה יחידה לכל העמודים (קורא `data-page` מ־`#root`, מרנדר `Header` + עמוד + `Footer` + `Floats`)
+- `src/ui/` — `components.tsx` (רכיבי `Badge`/`IconBadge`/`CheckList`/`StackList`/`SectionHead`/`Card`/`LinkCard`), `Header.tsx`, `Footer.tsx`, `Floats.tsx`, `useA11y.ts` (הוק נגישות עם localStorage)
+- `src/pages/` — רכיב לכל עמוד (`Home`, `Services`, `Projects`, `About`, `Process`, `Contact`, `Accessibility`, `Privacy`, `NotFound`; מרכיבים `ui/components` + `texts`, בלי עברית inline)
 - `public/` — `robots.txt`, `sitemap.xml`
 
 ## פרטי קשר (מעודכנים)
