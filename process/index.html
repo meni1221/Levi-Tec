@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF7628'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' text-anchor='middle' fill='%23111318'%3EL%3C/text%3E%3C/svg%3E" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="תהליך עבודה מסודר: משיחה ראשונית ועד השקה ותחזוקה." />
+  <title>תהליך עבודה | Levi-Tec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <meta name="theme-color" content="#111318" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main"></a>
+  <div data-mount="header"></div>
+  <main id="main">
+    <section class="section"><div class="container">
+      <div id="processHead"></div>
+      <div class="grid" style="grid-template-columns:1fr;margin-top:2.5rem" id="processList"></div>
+      <div id="processNote" style="margin-top:1.25rem"></div>
+      <div style="margin-top:2rem" id="processCta"></div>
+    </div></section>
+  </main>
+  <div data-mount="footer"></div>
+  <script type="module">
+    import { initPage } from "/src/shared.ts";
+    import { fullProcess } from "/src/texts/index.ts";
+    import { processPage } from "/src/texts/processPage.ts";
+    import { card, checkList, sectionHead } from "/src/ui/components.ts";
+    const t = processPage;
+    document.querySelector("#processHead").innerHTML = sectionHead(t.head.eyebrow, t.head.title, t.head.lead);
+    document.querySelector("#processList").innerHTML = fullProcess
+      .map((s) => card(`<h3><span class="ltr" style="color:var(--brand)">${s.n}</span> — ${s.title}</h3><p>${s.text}</p>`))
+      .join("");
+    document.querySelector("#processNote").innerHTML =
+      card(`<h3>${t.noteCard.title}</h3>` + checkList(t.noteCard.items));
+    document.querySelector("#processCta").innerHTML =
+      `<a class="btn btn-primary" href="/contact/">${t.cta}</a>`;
+    initPage("process");
+  </script>
+</body>
+</html>
