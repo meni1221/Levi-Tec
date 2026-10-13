@@ -23,7 +23,7 @@ export const accessibilityPage = {
     phoneLabel: "טלפון:",
     phoneDisplay: "053-301-1599",
   },
-  note: "הערה לבעל האתר: מסמך הצהרת הנגישות המלא (Word) נמצא בתיקיית _incoming — יש להעתיק את תוכנו לכאן.",
+  note: "הנוסח המשפטי המלא יושלם ויעודכן כאן בהמשך.",
 };
 
 export const privacyPage = {
@@ -49,5 +49,5 @@ export const privacyPage = {
     phoneLabel: "טלפון:",
     phoneDisplay: "053-301-1599",
   },
-  note: "הערה לבעל האתר: מסמך מדיניות הפרטיות המלא (Word) נמצא בתיקיית _incoming — יש להעתיק את תוכנו לכאן.",
+  note: "הנוסח המשפטי המלא יושלם ויעודכן כאן בהמשך.",
 };
