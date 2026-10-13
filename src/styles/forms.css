@@ -1,0 +1,13 @@
+.form-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 1.5rem; }
+@media (min-width: 640px) { .form-card { padding: 2rem; } }
+.form-grid { display: grid; gap: 1.25rem; }
+@media (min-width: 640px) { .form-grid-2 { grid-template-columns: 1fr 1fr; } }
+label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
+input, select, textarea {
+  width: 100%; border: 1px solid var(--line); background: #14171d; color: #fff;
+  border-radius: 12px; padding: 0.8rem 1rem; font-size: 1rem; font-family: inherit;
+}
+textarea { resize: vertical; }
+.notice { border-radius: 12px; padding: 0.8rem 1rem; margin-top: 1rem; -webkit-user-select:text; user-select:text; }
+.notice.ok { border: 1px solid #166534; background: #052e16; color: #bbf7d0; }
+.notice.err { border: 1px solid #991b1b; background: #450a0a; color: #fecaca; }

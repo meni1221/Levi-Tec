@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--base);
+  color: var(--text);
+  font-family: "Heebo", Arial, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* הטקסטים באתר אינם ניתנים להעתקה — שדות טופס נשארים ניתנים לכתיבה */
+body, p, h1, h2, h3, h4, li, span, a, dt, dd, div {
+  -webkit-user-select: none;
+  user-select: none;
+}
+input, textarea, select { -webkit-user-select: text; user-select: text; }
+img { -webkit-user-drag: none; pointer-events: none; }
+a img { pointer-events: none; }
+
+::selection { background: var(--brand); color: var(--base); }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+
+.ltr { direction: ltr; unicode-bidi: isolate; }
+.container { max-width: 72rem; margin-inline: auto; padding-inline: 1.25rem; }
+@media (min-width: 640px) { .container { padding-inline: 2rem; } }
+
+.skip-link {
+  position: absolute; inset-inline-start: 1rem; top: -100px; z-index: 200;
+  background: var(--brand); color: #111; padding: 0.6rem 1rem; border-radius: 8px; font-weight: 700;
+}
+.skip-link:focus { top: 1rem; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 3rem; padding: 0 1.5rem; border-radius: 12px; font-weight: 700; font-size: 1rem;
+  text-decoration: none; border: 1px solid transparent; cursor: pointer;
+}
+.btn-primary { background: var(--brand); color: #111; }
+.btn-primary:hover { background: #ff8a45; }
+.btn-secondary { background: var(--surface); color: #fff; border-color: var(--line); }
+.btn-secondary:hover { border-color: var(--brand); color: var(--brand); }
+.btn-sm { min-height: 2.75rem; padding: 0 1.25rem; }
+
+.hr-fade { height: 1px; background: linear-gradient(to left, transparent, var(--line), transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

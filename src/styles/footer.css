@@ -1,0 +1,8 @@
+footer { border-top: 1px solid var(--line); background: #0d0f13; }
+.footer-grid { display: grid; gap: 2.5rem; padding: 3.5rem 0; }
+@media (min-width: 860px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+footer nav ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+footer a { color: var(--text-dim); text-decoration: none; }
+footer a:hover { color: var(--brand); }
+.footer-bottom { border-top: 1px solid var(--line); padding: 1.25rem 0; font-size: 0.85rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.5rem; }
+@media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }

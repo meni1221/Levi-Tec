@@ -1,0 +1,13 @@
+:root {
+  --base: #111318;
+  --surface: #1a1d23;
+  --surface-2: #22262f;
+  --brand: #ff7628;
+  --brand-dark: #d95f16;
+  --paper: #f5f5f3;
+  --muted: #777e89;
+  --line: #2a2e37;
+  --text: #f2f1ed;
+  --text-dim: #c6c9d1;
+  --radius: 14px;
+}
